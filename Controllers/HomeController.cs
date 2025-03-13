@@ -1,6 +1,5 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using webapp.Entities;
 using webapp.Models;
 
 // using System.ComponentModel.DataAnnotations;
@@ -8,6 +7,8 @@ using webapp.Models;
 using System;
 namespace webapp.Controllers;
 
+[ApiController]
+[Route("/Home/GetObjects")]
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
@@ -18,6 +19,7 @@ public class HomeController : Controller
 
 
     }
+[Route("/")]
 
     public IActionResult Index()
     {
@@ -29,21 +31,21 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Setstring()
+
+[Route("/Home/Setstring")]
+[HttpGet] 
+   public IActionResult Setstring()
     {
-        EntityOne enone = new EntityOne();
+        Post enone = new Post
 
-
-        enone = null;
-        // {
-        //     Name = "prashanth",
-        //     Email = "pashireddi@gmail.com",
-        //     Phone = "816 203 9740",
-        //     WillAttend = false
-        // };
+        {
+            Name = "prashanth",
+            Email = "pashireddi@gmail.com",
+            Phone = "816 203 9740",
+            WillAttend = false
+        };
         return View(enone);
     }
-
 
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -51,6 +53,9 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+
+
+
 
 
 
