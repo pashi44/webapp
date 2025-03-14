@@ -12,12 +12,15 @@ namespace webapp.Controllers;
     public class PostController : ControllerBase
         {
 
-private readonly PostService _postService;
-//titghly coupling to the service class ; we could have use d the DI with interface class
+private readonly IPostService _postService;
+//titghly coupling to the POstservice class ; we could have use d the DI with interface class
 //  but slowly start with this approach and win the race at the end;  later in time
 
-public PostController(){
-    _postService = new PostService();
+public PostController(IPostService postService){
+
+_postService = postService;
+
+
 }
 
     // sice we made a  service that retuenan api request we can use the service to get the data
@@ -88,13 +91,40 @@ return  CreatedAtAction(nameof(GetPost),new {id = item.Id},item);
 }
 
 
+[HttpPut("{id}")]
+
+public async Task<ActionResult<Post?>> UpdatePost(int id,Post item){
+
+
+if(id != item.Id){
+ return BadRequest();   
+
+
+}
+
+
+Post? updatedPost=  await _postService.UpdatePost(id,item);
+if(updatedPost == null)
+return NotFound();
+else return Ok(item);
+
+}
 
 
 
 
 
+[HttpGet("{id}/name")]
+
+public  async Task<ActionResult<string>> GetPostName(int id){
 
 
+
+Post? post = await _postService.GetPost(id);
+if(post == null)  return NotFound();
+else return Ok(post.Name);
+
+}
 
 
         }//class

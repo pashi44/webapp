@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-
+using webapp.Services;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddScoped<IPostService, PostService>();
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(); // Add Swagger

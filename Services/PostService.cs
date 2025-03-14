@@ -1,14 +1,14 @@
 using webapp.Models;
 namespace webapp.Services;
 
-public  class PostService
+public  class PostService : IPostService
 {
 
 private   static readonly List<Post>  postlist =  new();
 
 
 
-public Task CreatePost(Post item){
+public Task CreatePost(Post item) {
 postlist.Add(item);
 
 return Task.CompletedTask;
@@ -17,7 +17,7 @@ return Task.CompletedTask;
 public Task<Post ?>   UpdatePost(int id,Post item){
 
 Post? post =   postlist.FirstOrDefault<Post?>(x=>x.Id==id);
-if(post !=null){post.Name = item.Name;
+if(post !=null){post.Name = item.Name;  
 post.Email = item.Email;
 post.Phone = item.Phone;
 post.WillAttend = item.WillAttend;
