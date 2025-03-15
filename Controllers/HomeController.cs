@@ -40,8 +40,8 @@ public class HomeController : Controller
 
         {
             Name = "prashanth",
-            Email = "pashireddi@gmail.com",
             Phone = "816 203 9740",
+            Email = "pashireddi@gmail.com",
             WillAttend = false
         };
         return View(enone);
