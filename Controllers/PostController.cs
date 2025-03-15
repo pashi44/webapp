@@ -54,9 +54,17 @@ else  return Ok(postlist);
 
 
 
-[HttpGet("search")] 
-//source binding parametrs could also be used in the route  templaTES 
-//based on the type of siurce binding parameter  for id?=123
+[HttpGet("search")]
+    //source binding parametrs could also be used in the route  templaTES 
+    //based on the type of siurce binding parameter  for post?id=1
+    // [FromBody]: The parameter is from the request body
+// • [FromForm]: The parameter is from the form data in the request body
+// • [FromHeader]: The parameter is from the request header
+// • [FromQuery]: The parameter is from the query strings in the request
+// • [FromRoute]: The parameter is from the route path
+// • [FromServices]: The parameter is from the DI container
+// 
+
 public async  Task<ActionResult<Post?>> SearchPost([FromQuery]  int  id){
 
 
