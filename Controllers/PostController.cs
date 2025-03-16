@@ -98,9 +98,6 @@ Post? post =   null;
             return Ok(post);
 
         }
-
-        // HTTP verbs also support regex
-
         // POST /post/{id}
         [HttpPost("{id:int:range(1,1000)}")]
         public async Task<ActionResult<Post>> CreatePost([FromRoute] int postid, [FromBody] Post item) // Use [FromBody] for request body
@@ -110,7 +107,6 @@ Post? post =   null;
             await _postService.CreatePost(postid,item);
             return CreatedAtAction(nameof(GetPost), new { id = item.Id }, item);
         }
-
         // PUT /post/{id}
         [HttpPut("{id}")]
         public async Task<ActionResult<Post?>> UpdatePost(
