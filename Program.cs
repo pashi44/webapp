@@ -1,12 +1,40 @@
 using Microsoft.AspNetCore.Mvc;
 using webapp.Services;
+
+
+using Serilog;
+using Microsoft.Extensions.Logging;
+using Serilog.Formatting.Json;
+
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IPostService, PostService>();
 
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
-builder.Logging.AddDebug();
-builder.Logging.AddEventSourceLogger();
+// builder.Logging.AddDebug();
+// builder.Logging.AddEventSourceLogger();
+
+//sinking log  events to the log dir with  serilog: ISerilog 
+
+// and also  we define sinks with nlog and log4net nugets log providers
+var log = new LoggerConfiguration().WriteTo.File(
+    Path.Combine(path1: AppDomain.CurrentDomain.BaseDirectory, path2: "logs/log.txt"),
+    rollingInterval: RollingInterval.Day, retainedFileCountLimit: 3).
+    WriteTo.Console(new JsonFormatter())
+    .CreateLogger();
+builder.Logging.AddSerilog(log);
+
+// Exceptionless(https://exceptionless.com/)
+// •
+// ELK Stack(https://www.elastic.co/elastic-stack/)
+// •
+// Sumo Logic(https://www.sumologic.com/)
+// •
+// Seq(https://datalust.co/seq)
+// •
+// Sentry(https://sentry.io)
+//the  above log provides   also provides dash boards for the  event logs 
 
 
 builder.Services.AddControllers();

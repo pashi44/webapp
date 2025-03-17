@@ -38,9 +38,9 @@ public class Configuration : ControllerBase
     {
 
         var key = _configuration["Database:ConnectionString"] ?? string.Empty;
-
-        _logconfig.Log(LogLevel.Information,
-        "the connection  string is reterved {key}", key);
+        _logconfig.LogInformation(
+              "This is a logging message with args: Today is { Week }. It is { Time }.",
+               DateTime.Now.DayOfWeek, DateTime.Now.ToLongTimeString());
 
         return Ok(key);
 

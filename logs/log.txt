@@ -1,0 +1,38 @@
+2025-03-17 03:03:21.296 -05:00 [INF] User profile is available. Using '/Users/pashi/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-03-17 03:03:21.345 -05:00 [INF] Now listening on: http://localhost:5127
+2025-03-17 03:03:21.346 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-17 03:03:21.346 -05:00 [INF] Hosting environment: Development
+2025-03-17 03:03:21.346 -05:00 [INF] Content root path: /Users/pashi/webapp
+2025-03-17 03:03:36.964 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/Configuration/get-databasekey - application/json 31
+2025-03-17 03:03:36.975 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-17 03:03:36.986 -05:00 [INF] Executing endpoint 'webapp.Controllers.Configuration.GetDBdeatils (webapp)'
+2025-03-17 03:03:36.999 -05:00 [INF] Route matched with {action = "GetDBdeatils", controller = "Configuration"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetDBdeatils() on controller webapp.Controllers.Configuration (webapp).
+2025-03-17 03:03:37.001 -05:00 [INF] This is a logging message with args: Today is { Week }. It is { Time }.
+2025-03-17 03:03:37.003 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-03-17 03:03:37.007 -05:00 [INF] Executed action webapp.Controllers.Configuration.GetDBdeatils (webapp) in 6.5951ms
+2025-03-17 03:03:37.008 -05:00 [INF] Executed endpoint 'webapp.Controllers.Configuration.GetDBdeatils (webapp)'
+2025-03-17 03:03:37.009 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/Configuration/get-databasekey - 200 null text/plain; charset=utf-8 46.4043ms
+2025-03-17 03:04:23.380 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/Configuration/get-databasekey - application/json 31
+2025-03-17 03:04:23.385 -05:00 [INF] Executing endpoint 'webapp.Controllers.Configuration.GetDBdeatils (webapp)'
+2025-03-17 03:04:23.385 -05:00 [INF] Route matched with {action = "GetDBdeatils", controller = "Configuration"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetDBdeatils() on controller webapp.Controllers.Configuration (webapp).
+2025-03-17 03:04:23.386 -05:00 [INF] This is a logging message with args: Today is { Week }. It is { Time }.
+2025-03-17 03:04:23.386 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-03-17 03:04:23.387 -05:00 [INF] Executed action webapp.Controllers.Configuration.GetDBdeatils (webapp) in 0.9914ms
+2025-03-17 03:04:23.387 -05:00 [INF] Executed endpoint 'webapp.Controllers.Configuration.GetDBdeatils (webapp)'
+2025-03-17 03:04:23.387 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/Configuration/get-databasekey - 200 null text/plain; charset=utf-8 7.8608ms
+2025-03-17 03:04:35.906 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/Configuration/get-databasekey - application/json 31
+2025-03-17 03:04:35.909 -05:00 [INF] Executing endpoint 'webapp.Controllers.Configuration.GetDBdeatils (webapp)'
+2025-03-17 03:04:35.909 -05:00 [INF] Route matched with {action = "GetDBdeatils", controller = "Configuration"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetDBdeatils() on controller webapp.Controllers.Configuration (webapp).
+2025-03-17 03:04:35.909 -05:00 [INF] This is a logging message with args: Today is { Week }. It is { Time }.
+2025-03-17 03:04:35.909 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-03-17 03:04:35.910 -05:00 [INF] Executed action webapp.Controllers.Configuration.GetDBdeatils (webapp) in 0.6546ms
+2025-03-17 03:04:35.910 -05:00 [INF] Executed endpoint 'webapp.Controllers.Configuration.GetDBdeatils (webapp)'
+2025-03-17 03:04:35.910 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/Configuration/get-databasekey - 200 null text/plain; charset=utf-8 4.0389ms
+2025-03-17 03:04:59.407 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/Configuration/get-databasekey - application/json 31
+2025-03-17 03:04:59.409 -05:00 [INF] Executing endpoint 'webapp.Controllers.Configuration.GetDBdeatils (webapp)'
+2025-03-17 03:04:59.414 -05:00 [INF] Route matched with {action = "GetDBdeatils", controller = "Configuration"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetDBdeatils() on controller webapp.Controllers.Configuration (webapp).
+2025-03-17 03:04:59.414 -05:00 [INF] This is a logging message with args: Today is { Week }. It is { Time }.
+2025-03-17 03:04:59.414 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-03-17 03:04:59.414 -05:00 [INF] Executed action webapp.Controllers.Configuration.GetDBdeatils (webapp) in 0.5804ms
+2025-03-17 03:04:59.414 -05:00 [INF] Executed endpoint 'webapp.Controllers.Configuration.GetDBdeatils (webapp)'
+2025-03-17 03:04:59.415 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/Configuration/get-databasekey - 200 null text/plain; charset=utf-8 7.4104ms
