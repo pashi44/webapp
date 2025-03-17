@@ -1,26 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "/home/hadoop/net/webapp/webapp.csproj": {}
+    "/Users/pashi/webapp/webapp.csproj": {}
   },
   "projects": {
-    "/home/hadoop/net/webapp/webapp.csproj": {
+    "/Users/pashi/webapp/webapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/hadoop/net/webapp/webapp.csproj",
+        "projectUniqueName": "/Users/pashi/webapp/webapp.csproj",
         "projectName": "webapp",
-        "projectPath": "/home/hadoop/net/webapp/webapp.csproj",
-        "packagesPath": "/home/hadoop/.nuget/packages/",
-        "outputPath": "/home/hadoop/net/webapp/obj/",
+        "projectPath": "/Users/pashi/webapp/webapp.csproj",
+        "packagesPath": "/Users/pashi/.nuget/packages/",
+        "outputPath": "/Users/pashi/webapp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/hadoop/.nuget/NuGet/NuGet.Config"
+          "/Users/pashi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "/usr/lib/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,8 +37,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -50,6 +48,10 @@
               "version": "[2.3.0, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[9.0.0, )"
             },
@@ -69,12 +71,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.linux-x64",
-              "version": "[8.0.14, 8.0.14]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -83,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.104/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.407/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

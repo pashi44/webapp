@@ -3,6 +3,12 @@ using webapp.Services;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IPostService, PostService>();
 
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+builder.Logging.AddDebug();
+builder.Logging.AddEventSourceLogger();
+
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(); // Add Swagger
@@ -51,8 +57,8 @@ app.MapControllerRoute(
 // 
 // 
 // 
-    // name: "default",
-    // template: "{Controller=Home}/{Action=Index}/{Id?}"
+// name: "default",
+// template: "{Controller=Home}/{Action=Index}/{Id?}"
 // ));
 
 

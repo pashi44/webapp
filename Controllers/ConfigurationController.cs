@@ -12,23 +12,41 @@ public class Configuration : ControllerBase
 
 
 {
-private  readonly  IConfiguration _configuration;
+    private readonly IConfiguration _configuration;
+    private readonly ILogger<Configuration> _logconfig;
 
-Configuration(IConfiguration  configuration)
-{
+    public Configuration(IConfiguration configuration, ILogger<Configuration> logconfig)
+    {
 
-    _configuration =  configuration;
-}
-
-
-[HttpGet("get-key")]  //static route 
-
+        _configuration = configuration;
+        _logconfig = logconfig;
+    }
 
 
+    [HttpGet("get-key")]  //static route 
+
+    public ActionResult GetMyKey()
+    {
+        var myKey = _configuration["MyKey"];//from the appSettings.json
+        return Ok(myKey);
+    }
+
+    [HttpGet("get-databasekey")]
 
 
+    public ActionResult GetDBdeatils()
+    {
 
-// Page 101
+        var key = _configuration["Database:ConnectionString"] ?? string.Empty;
+
+        _logconfig.Log(LogLevel.Information,
+        "the connection  string is reterved {key}", key);
+
+        return Ok(key);
+
+    }
+
+
 
 
 
