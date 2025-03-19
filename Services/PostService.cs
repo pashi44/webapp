@@ -16,7 +16,7 @@ return Task.CompletedTask;
 
 public Task<Post ?>   UpdatePost(int id,Post item){
 
-Post? post =   postlist.FirstOrDefault<Post?>(x=>x.Id==id);
+Post? post =   postlist.FirstOrDefault<Post?>(x=>x?.Id==id);
 if(post !=null){post.Name = item.Name;  
 post.Email = item.Email;
 post.Phone = item.Phone;
@@ -26,14 +26,14 @@ return Task.FromResult(post);
 
 }
 public Task<Post?> GetPost(int gid){
-return Task.FromResult(postlist.FirstOrDefault<Post?>(x=>x.Id==gid));
+return Task.FromResult(postlist.FirstOrDefault<Post?>(x=>x?.Id==gid));
 }
 public Task<List<Post>> GetAllPosts(){ 
     return Task.FromResult(postlist);
 }
 
 public Task DeletePost(int gid){
-    Post? post = postlist.FirstOrDefault<Post?>(x=>x.Id==gid);
+    Post? post = postlist.FirstOrDefault(x=>x?.Id==gid);
     if(post !=null){
         postlist.Remove(post);
     }

@@ -16,3 +16,8 @@ build/*
 obj
 obj/
 ob/**
+
+
+logs
+logs/
+logs/*
