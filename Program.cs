@@ -29,8 +29,13 @@ var log = new LoggerConfiguration()
     // .WriteTo.Seq("http://localhost:5341") // Send logs to Seq
     .CreateLogger();
 
+
+
 // Add Serilog to the logging pipeline
 builder.Logging.AddSerilog(log);
+
+
+
 builder.Services.AddDbContext<InvoiceDbContext>(options =>
  options.UseMySql(builder.Configuration.
 GetConnectionString("DefaultConnection"), 

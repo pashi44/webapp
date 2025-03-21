@@ -1,1 +1,1 @@
-select *  from  Invoice;
+select *  from  Invoices;

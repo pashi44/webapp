@@ -21,3 +21,9 @@ ob/**
 logs
 logs/
 logs/*
+
+
+
+migrations
+migrations/
+migrations/**

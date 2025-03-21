@@ -12,8 +12,8 @@ using webapp.dbdata;
 namespace webapp.Migrations
 {
     [DbContext(typeof(InvoiceDbContext))]
-    [Migration("20250319051925_AddSeedData")]
-    partial class AddSeedData
+    [Migration("20250320053129_Seeduignschema")]
+    partial class Seeduignschema
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,8 +31,8 @@ namespace webapp.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)");
 
-                    b.Property<decimal>("Amount")
-                        .HasColumnType("decimal(65,30)");
+                    b.Property<double>("Amount")
+                        .HasColumnType("double");
 
                     b.Property<string>("ContactName")
                         .IsRequired()
@@ -56,13 +56,13 @@ namespace webapp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Invoice");
+                    b.ToTable("Invoices");
 
                     b.HasData(
                         new
                         {
-                            Id = new Guid("80061cee-af8f-4856-9c44-2a6e56eb17b4"),
-                            Amount = 100m,
+                            Id = new Guid("beea2769-ab1e-4fb4-b50e-efdc96d74256"),
+                            Amount = 100.0,
                             ContactName = "Iron Man",
                             Description = "Invoice for the first month",
                             DueDate = new DateTimeOffset(new DateTime(2023, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),

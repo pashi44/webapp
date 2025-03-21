@@ -17,8 +17,10 @@ public class InvoiceDbContext : DbContext
 
     public DbSet<Invoice>? Invoices { get; set; } = null!;
 
-    // public DbSet<Invoice> Invoicesset => Set<Invoice>();// to handle with hull  refernces types
+    public DbSet<Post> Posts { get; set; } = null!;
 
+
+    // public DbSet<Invoice> Invoicesset => Set<Invoice>();// to handle with hull  refernces types
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
 
@@ -28,16 +30,35 @@ public class InvoiceDbContext : DbContext
         new Invoice
         {
             Id = Guid.NewGuid(),
-            InvoiceNumber = "INV-001",
-            ContactName = "Iron Man",
-            Description = "Invoice for the first month",
-            Amount = 100,
+            InvoiceNumber = "INV-003",
+            ContactName = "Mouni",
+            Description = "Invoice for the     mouni month",
+            Amount = 100000,
             InvoiceDate = new DateTimeOffset(2023, 1, 1, 0, 0, 0,
        TimeSpan.Zero),
             DueDate = new DateTimeOffset(2023, 1, 15, 0, 0, 0,
        TimeSpan.Zero),
             Status = InvoiceStatus.AwaitPayment
-        });
+        },
+        
+        new Invoice
+        {
+            Id= Guid.NewGuid(), 
+            InvoiceNumber =  "INV-002",
+
+            Description = "Invoice for the     pashi month",
+            Amount = 100000,
+            InvoiceDate = new DateTimeOffset(2023, 1, 1, 0, 0, 0,
+       TimeSpan.Zero),
+            DueDate = new DateTimeOffset(2023, 1, 15, 0, 0, 0,
+       TimeSpan.Zero),
+            Status = InvoiceStatus.AwaitPayment
+
+
+
+        }
+
+        );
     }
 
 

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using webapp.dbdata;
 
@@ -11,9 +12,11 @@ using webapp.dbdata;
 namespace webapp.Migrations
 {
     [DbContext(typeof(InvoiceDbContext))]
-    partial class InvoiceDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250320055723_Secondata")]
+    partial class Secondata
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -58,7 +61,7 @@ namespace webapp.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("b328bc17-fd84-4ecd-8e0d-a1b34b350b81"),
+                            Id = new Guid("8fe10c03-542f-48a2-a58f-48c8d305babd"),
                             Amount = 100000.0,
                             ContactName = "Mouni",
                             Description = "Invoice for the     mouni month",
@@ -66,46 +69,7 @@ namespace webapp.Migrations
                             InvoiceDate = new DateTimeOffset(new DateTime(2023, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             InvoiceNumber = "INV-003",
                             Status = 1
-                        },
-                        new
-                        {
-                            Id = new Guid("1ad9219d-a910-4746-802f-ce57d7def8da"),
-                            Amount = 100000.0,
-                            ContactName = "",
-                            Description = "Invoice for the     pashi month",
-                            DueDate = new DateTimeOffset(new DateTime(2023, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
-                            InvoiceDate = new DateTimeOffset(new DateTime(2023, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
-                            InvoiceNumber = "pashi",
-                            Status = 1
                         });
-                });
-
-            modelBuilder.Entity("webapp.Models.Post", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateOnly>("Date")
-                        .HasColumnType("date");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Phone")
-                        .HasColumnType("longtext");
-
-                    b.Property<bool?>("WillAttend")
-                        .HasColumnType("tinyint(1)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Posts");
                 });
 #pragma warning restore 612, 618
         }

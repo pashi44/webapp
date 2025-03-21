@@ -1,4 +1,4 @@
-2025-03-17 22:18:52.427 -05:00 [INF] User profile is available. Using '/home/hadoop/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+DESC csv.Invoices;2025-03-17 22:18:52.427 -05:00 [INF] User profile is available. Using '/home/hadoop/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
 2025-03-17 22:18:52.636 -05:00 [INF] Now listening on: http://localhost:5127
 2025-03-17 22:18:52.642 -05:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-03-17 22:18:52.644 -05:00 [INF] Hosting environment: Development

@@ -42,7 +42,7 @@ public Task DeletePost(int gid){
 
 
 public Task<Post?> GetPostByName(string name){
-    return Task.FromResult(postlist.FirstOrDefault<Post?>(x=>x.Name==name));
+    return Task.FromResult(postlist.FirstOrDefault<Post?>(x=>x?.Name==name));
 
 
 }
