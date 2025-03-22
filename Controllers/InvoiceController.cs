@@ -41,19 +41,25 @@ public async Task<ActionResult<IEnumerable<Invoice>?>> GetInvoices()
         {
             return NotFound();
         }
-        var invoice = await _context.Invoices.FindAsync(id);
-        if (invoice == null)
-        {
-            return NotFound();
-        }
+        // var invoice = await _context.Invoices.FindAsync(id);
+        //or         //mapped  the predicate of primary  key id 
+
+        var invoice = await _context.Invoices.SingleAsync(obje =>  obje.Id == id        
+         );
+
+         //singleasync maps the predicate of the primary key id and return 
+         //that  whoe entity 
         return Ok(invoice);
     }
 
 
 
+//singleorDefaultAyync maps the entites with te give predicate
+// throws exceptio if multiple entiotes found
+
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> PutInvoice(Guid id, Invoice
+    public async Task<IActionResult> PutInvoice(Guid id, [FromBody] Invoice
 invoice)
     {
         if (id != invoice.Id)
@@ -101,7 +107,8 @@ invoice)
     }
 
 
-
+//when we use AsQuerable LINQ method, it returns an IQueryable<T> object,
+//
 
 
 
@@ -113,6 +120,7 @@ invoice)
             return NotFound();
         }
         var invoice = await _context.Invoices.FindAsync(id);
+
         if (invoice == null)
         {
             return NotFound();
@@ -130,4 +138,7 @@ invoice)
     }
 
 
-} //class
+
+
+
+}

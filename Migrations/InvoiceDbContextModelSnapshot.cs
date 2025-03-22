@@ -58,7 +58,7 @@ namespace webapp.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("b328bc17-fd84-4ecd-8e0d-a1b34b350b81"),
+                            Id = new Guid("708efe75-02d1-4321-b6e9-f93c6ff0c95c"),
                             Amount = 100000.0,
                             ContactName = "Mouni",
                             Description = "Invoice for the     mouni month",
@@ -69,13 +69,13 @@ namespace webapp.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1ad9219d-a910-4746-802f-ce57d7def8da"),
+                            Id = new Guid("b7fbd840-844d-4bdd-88dd-87081d4cfb1d"),
                             Amount = 100000.0,
                             ContactName = "",
                             Description = "Invoice for the     pashi month",
                             DueDate = new DateTimeOffset(new DateTime(2023, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             InvoiceDate = new DateTimeOffset(new DateTime(2023, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
-                            InvoiceNumber = "pashi",
+                            InvoiceNumber = "INV-002",
                             Status = 1
                         });
                 });
